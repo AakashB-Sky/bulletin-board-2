@@ -23,4 +23,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many(:boards, class_name: "Board", foreign_key: "user_id", primary_key: "id")
+  has_many(:posts, class_name: "Post", foreign_key: "user_id", primary_key: "id")
 end
